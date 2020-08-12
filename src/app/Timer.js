@@ -13,7 +13,7 @@ class Timer extends Component {
     componentWillUnmount() {
         clearInterval();
     }
-    componentWillUnmount(){
+    componentWillUnmount() {
         clearInterval(this.timerRun)
     }
     handleUpdateTimer = () => {
@@ -57,6 +57,9 @@ class Timer extends Component {
                         />
                         <button className='startButton'
                             onClick={this.handleStartTimer}
+                            disabled={this.state.seconds > 0 
+                                && this.state.seconds != 'Start' 
+                                && this.state.seconds != 'End' }
                         >Start
                         </button>
                     </div>

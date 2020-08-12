@@ -3,6 +3,7 @@ import './home.less';
 import backGroundURL from '../images/hero-image.png'
 import calculatorURL from '../images/calculator.png'
 import timerURL from '../images/timer.png'
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -13,8 +14,16 @@ const Home = () => {
       </div>
 
       <div className="homeBelow">
-        <img className='calculatorImg' src={calculatorURL} alt='calculatorURL'></img>
-        <img className='timerImg' src={timerURL} alt='timerURL'></img>
+        <div className="homePageIcon">
+          <img className='calculatorImg' src={calculatorURL} alt='calculatorURL'></img>
+          <img className='timerImg' src={timerURL} alt='timerURL'></img>
+        </div>
+        <div className="linkBelowIcon">
+          <Link className='countDowntLinktimerIcon' to='/calculator'>计算器</Link>
+          <Link className='calculatorLinktimerIcon' to="/timer">倒计时器</Link>
+        </div>
+
+
       </div>
 
     </div>);
