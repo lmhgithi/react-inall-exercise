@@ -12,14 +12,14 @@ class App extends Component {
       <div className="app">
         <BrowserRouter>
           <div className="header">
-            <Link className='calculatorLink' to="/countDown">在线倒计时器</Link>
+            <Link className='calculatorLink' to="/timer">在线倒计时器</Link>
             <Link className='countDowntLink' to='/calculator'>在线计算器</Link>
             <Link className='homeLink' to="/">Home</Link>
           </div>
           <div className="body">
             <Switch>
               <Route exact path='/calculator' component={Calculator} />
-              <Route exact path='/countDown' component={Timer} />
+              <Route exact path='/timer' component={Timer} />
               <Route exact path='/' component={Home} />
               <Route component={NotMatch} />
             </Switch>
