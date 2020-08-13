@@ -18,9 +18,16 @@ class Calculator extends Component {
         })
     }
     handleCalculate = () => {
-        this.setState({
-            formula: eval(this.state.formula)
-        })
+        const regex = /\d+[\+\-\*]\d+/;
+        console.log(this.state.formula.replace(regex, '').length)
+        if (this.state.formula.replace(regex, '').length !== 0) {
+            this.handleReset();
+        } else {
+            this.setState({
+                formula: eval(this.state.formula)
+            })
+        }
+
     }
     render() {
         return (
