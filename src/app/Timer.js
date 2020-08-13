@@ -11,9 +11,6 @@ class Timer extends Component {
     timerRun;
 
     componentWillUnmount() {
-        clearInterval();
-    }
-    componentWillUnmount() {
         clearInterval(this.timerRun)
     }
     handleUpdateTimer = () => {
@@ -29,6 +26,7 @@ class Timer extends Component {
             clearInterval(this.timerRun)
         }
     }
+
     handleChange = () => {
         this.setState({
             inputSecond: event.target.value,
